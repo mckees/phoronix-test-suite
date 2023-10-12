@@ -7,7 +7,7 @@ cd oneDNN-1.3/
 
 mkdir build 
 cd build 
-CFLAGS="-O3 -march=native" CXXFLAGS="-O3 -march=native" cmake -DCMAKE_BUILD_TYPE=Release MKLDNN_ARCH_OPT_FLAGS="-O3 -march=native" $CMAKE_OPTIONS ..
+cmake -DCMAKE_BUILD_TYPE=Release MKLDNN_ARCH_OPT_FLAGS="-O3 -march=native" $CMAKE_OPTIONS ..
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 
