@@ -3,11 +3,10 @@
 tar -xf oneDNN-1.3.tar.gz
 
 cd oneDNN-1.3/
-#./scripts/prepare_mkl.sh 
 
 mkdir build 
 cd build 
-cmake -DCMAKE_BUILD_TYPE=Release MKLDNN_ARCH_OPT_FLAGS="-O3 -march=native" $CMAKE_OPTIONS ..
+cmake -DCMAKE_BUILD_TYPE=Release MKLDNN_ARCH_OPT_FLAGS="${CFLAGS}" $CMAKE_OPTIONS ..
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 
