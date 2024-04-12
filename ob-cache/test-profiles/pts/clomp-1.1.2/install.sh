@@ -3,7 +3,7 @@
 unzip -o clomp_v1.2.zip
 cd clomp_v1.2/
 
-cc -fopenmp -O3 $CFLAGS clomp.c -o clomp_build -lm
+cc -fopenmp $CFLAGS clomp.c -o clomp_build -lm
 echo $? > ~/install-exit-status
 
 cd ~/

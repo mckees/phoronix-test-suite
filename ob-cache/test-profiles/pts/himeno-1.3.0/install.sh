@@ -10,7 +10,7 @@ then
     fi
 fi
 
-cc himenobmtxpa.c -O3 $CFLAGS -o himenobmtxpa
+cc himenobmtxpa.c $CFLAGS -o himenobmtxpa
 echo $? > ~/install-exit-status
 
 echo "#!/bin/sh

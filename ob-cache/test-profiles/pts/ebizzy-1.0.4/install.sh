@@ -4,13 +4,6 @@ tar -zxvf ebizzy-0.3.tar.gz
 
 cd ebizzy-0.3/
 
-if [ "X$CFLAGS_OVERRIDE" = "X" ]
-then
-          CFLAGS="$CFLAGS -O3 -march=native"
-else
-          CFLAGS="$CFLAGS_OVERRIDE"
-fi
-
 cc -pthread -lpthread $CFLAGS -o ebizzy ebizzy.c
 echo $? > ~/install-exit-status
 cd ..

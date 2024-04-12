@@ -3,7 +3,7 @@
 tar -zxvf c-ray-1.1.tar.gz
 
 cd c-ray-1.1/
-cc -o c-ray-mt c-ray-mt.c -lm -lpthread -O3 $CFLAGS
+cc -o c-ray-mt c-ray-mt.c -lm -lpthread $CFLAGS
 echo $? > ~/install-exit-status
 cd ..
 

@@ -2,13 +2,6 @@
 
 tar -jxf stream-2013-01-17.tar.bz2
 
-if [ "X$CFLAGS_OVERRIDE" = "X" ]
-then
-          CFLAGS="$CFLAGS -O3 -march=native"
-else
-          CFLAGS="$CFLAGS_OVERRIDE"
-fi
-
 STREAM_ARRAY_SIZE=100000000
 L3_CACHE_SIZE=`getconf LEVEL3_CACHE_SIZE`
 SIZE_BASED_ON_L3=$((L3_CACHE_SIZE * 4))

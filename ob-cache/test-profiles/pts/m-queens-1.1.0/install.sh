@@ -4,13 +4,6 @@ tar -zxvf m-queens-1.2.tar.gz
 
 cd m-queens-1.2/
 
-if [ "X$CFLAGS_OVERRIDE" = "X" ]
-then
-          CFLAGS="$CFLAGS -O2 -march=native"
-else
-          CFLAGS="$CFLAGS_OVERRIDE"
-fi
-
 # fixed board size N=19
 g++ -fopenmp $CFLAGS main.c -o m-queens.bin
 echo $? > ~/install-exit-status

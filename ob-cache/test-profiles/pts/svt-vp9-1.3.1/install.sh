@@ -5,8 +5,6 @@
 
 tar -xf SVT-VP9-0.3.0.tar.gz
 cd SVT-VP9-0.3.0/Build/linux
-export CFLAGS="-O3 -fcommon $CFLAGS"
-export CXXFLAGS="-O3 -fcommon $CXXFLAGS"
 ./build.sh release
 echo $? > ~/install-exit-status
 

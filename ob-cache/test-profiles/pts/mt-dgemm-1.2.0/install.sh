@@ -3,7 +3,7 @@
 tar -xf mtdgemm-crossroads-v1.0.0.tgz
 
 
-cc -O3 -march=native -fopenmp $CFLAGS -o mtdgemm mt-dgemm/src/mt-dgemm.c
+cc -fopenmp $CFLAGS -o mtdgemm mt-dgemm/src/mt-dgemm.c
 echo $? > ~/install-exit-status
 rm -rf mt-dgemm
 

@@ -22,7 +22,7 @@ then
     fi
 fi
 
-cmake .. -DMNN_BUILD_BENCHMARK=true -DCMAKE_BUILD_TYPE=Release -DMNN_OPENMP=ON $EXTRA_CMAKE_FLAGS
+cmake .. -DMNN_BUILD_BENCHMARK=true -DCMAKE_BUILD_TYPE=Release -DMNN_OPENMP=ON
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 

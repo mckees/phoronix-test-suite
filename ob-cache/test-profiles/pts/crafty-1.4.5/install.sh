@@ -5,15 +5,15 @@ unzip -o crafty-25.2.zip
 
 if [ "X$CFLAGS_OVERRIDE" = "X" ]
 then
-          CFLAGS="$CFLAGS -O3 -march=native"
+          CFLAGS="$CFLAGS"
 else
           CFLAGS="$CFLAGS_OVERRIDE"
 fi
 
 export CC="cc"
 export CXX="c++"
-export CFLAGS="-Wall -pipe -fomit-frame-pointer $CFLAGS -j $NUM_CPU_CORES"
-export CXFLAGS="-Wall -pipe -O3 -fomit-frame-pointer $CXXFLAGS -j $NUM_CPU_CORES"
+export CFLAGS="-Wall -pipe $CFLAGS -j $NUM_CPU_CORES"
+export CXFLAGS="-Wall -pipe $CXXFLAGS -j $NUM_CPU_CORES"
 export LDFLAGS="$LDFLAGS -pthread -lstdc++"
 # sed -i ".orig" -e 's/-j /-j4 /g' Makefile
 sed -i 's/-j / /g' Makefile

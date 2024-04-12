@@ -53,12 +53,6 @@ then
 	echo $MPI_VERSION > ~/install-footnote
 fi
 
-if [ "X$CFLAGS_OVERRIDE" = "X" ]
-then
-          CFLAGS="$CFLAGS -O3 -march=native"
-else
-          CFLAGS="$CFLAGS_OVERRIDE"
-fi
  CCVERSION=`cc -dumpversion | sed "s/\..*//"`
 echo "Compiler Version is $CCVERSION"
 if [ "$CCVERSION" -gt 9 ]; then
